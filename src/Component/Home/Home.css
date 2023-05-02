@@ -1,0 +1,26 @@
+.banner-img{
+    width:100%;
+}
+.card-box{
+    text-align:center;
+    color:#fff;
+    border:none;
+}
+.card-info{
+    margin-top:15vh;
+}
+.title span{
+    color:rgb(18, 147, 246);
+}
+.sub-title{
+    font-size:12px;
+}
+.btns{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-top:25px;
+}
+.btns button{
+    margin:0 12px;
+}
