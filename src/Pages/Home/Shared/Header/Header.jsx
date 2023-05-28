@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
     const navBar = <>
-        <li><a>Home</a></li>
+        <li><Link to='/'>Home</Link></li>
         <li><a>Blog</a></li>
         <li><a>login</a></li>
 

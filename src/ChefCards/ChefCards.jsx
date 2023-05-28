@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 
 
 const ChefCards = ({ chef }) => {
 
-    const { picture, name, experience, numbers, likes } = chef
+    const { picture, name, experience, numbers, likes,id } = chef
 
     return (
         <div className="card card-compact  bg-base-100 shadow-xl">
@@ -13,7 +14,8 @@ const ChefCards = ({ chef }) => {
                 <p>Numbers of recipes:{numbers}</p>
                 <p>Total Likes:{likes}</p>
                 <div className="flex py-4">
-                    <button className="btn btn-primary">View Recipes</button>
+                    
+                    <Link className="btn btn-primary" to={`/recipe/${id}`}>View Recipes</Link>
                 </div>
             </div>
         </div>
