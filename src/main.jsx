@@ -12,6 +12,8 @@ import Error from './Error/Error';
 import Blog from './Pages/Blog/Blog';
 import Login from './Login/Login';
 import Registration from './Registration/Registration';
+import AuthProvider from './Providers/AuthProvider';
+import PrivateRoute from './Routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/recipe/:id",
-        element:<Recipe></Recipe>,
+        element:<PrivateRoute><Recipe></Recipe></PrivateRoute>,
         loader:({params}) =>
         fetch(`http://localhost:5000/cards/${params.id}`)
       },
@@ -47,8 +49,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
     <div className='px-20'>
     <RouterProvider router={router} />
     </div>
+    </AuthProvider>
   </React.StrictMode>,
 )
