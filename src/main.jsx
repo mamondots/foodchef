@@ -8,15 +8,22 @@ import {
 import Main from './Layout/Main';
 import Home from './Pages/Home/Home/Home';
 import Recipe from './Pages/Recipe/Recipe';
+import Error from './Error/Error';
+import Blog from './Pages/Blog/Blog';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<Error></Error>,
     children: [
       {
         path: "/",
         element:<Home></Home>
+      },
+      {
+        path: "/blog",
+        element:<Blog></Blog>
       },
       {
         path: "/recipe/:id",
